@@ -1,0 +1,159 @@
+.btn {
+  font-family: "Inter", sans-serif;
+
+  &_addCard {
+    background: $white;
+    border: 1px solid $mid-light-grey;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    &.active {
+      background: linear-gradient(180deg, #89f09c 0%, #3cc755 100%);
+    }
+  }
+
+  &_favoriteCard {
+  }
+
+  &.filter {
+    background: $light-green;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px;
+    color: $white;
+
+    svg {
+      transform: rotate(45deg);
+      margin-right: 5px;
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  &.addItem {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    color: $white;
+    border: none;
+    border-radius: 20px;
+    height: 55px;
+    width: 400px;
+    cursor: pointer;
+    background: $green;
+
+    &:hover {
+      background: darken($green, 3%);
+    }
+  }
+
+  &_favoriteItem {
+    background: $white;
+    border: 1px solid $mid-light-grey;
+    border-radius: 15px;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    margin-left: 20px;
+
+    &:hover {
+      border: 1px solid $light-green;
+
+      svg {
+        path {
+          stroke: $light-green;
+        }
+      }
+    }
+
+    &.active {
+      background: $very-light-red;
+
+      svg {
+        fill: $crimson;
+
+        path {
+          stroke: $crimson;
+        }
+      }
+    }
+  }
+
+  &.writeReview {
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+    height: 46px;
+    cursor: pointer;
+    color: $white;
+    background: $blue;
+
+    &:hover {
+      background: darken($blue, 3%);
+    }
+  }
+
+  &_back {
+    background: $white;
+    border: 1px solid $mid-light-grey;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin-right: 20px;
+
+    &:hover {
+      border: 1px solid $light-green;
+
+      svg {
+        path {
+          stroke: $light-green;
+        }
+      }
+    }
+  }
+
+  &.change,
+  &.save,
+  &.quit {
+    padding: 0 30px;
+    height: 100%;
+    background: $green;
+    border-radius: 20px;
+    border: none;
+    color: $white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($green, 3%);
+    }
+  }
+
+  &.save {
+    background: $green;
+    padding: 15px 30px;
+
+    &:hover {
+      background: darken($green, 3%);
+    }
+  }
+
+  &.quit {
+    padding: 15px 30px;
+    background: $red;
+
+    &:hover {
+      background: darken($red, 3%);
+    }
+  }
+}

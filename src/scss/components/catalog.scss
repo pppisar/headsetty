@@ -1,0 +1,10 @@
+.catalog {
+  &_orders,
+  &_favorites {
+    //TODO:Поправить при большом количестве елементов
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: max-content;
+    grid-gap: 2%;
+  }
+}

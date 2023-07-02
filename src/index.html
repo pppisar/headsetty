@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>HEADSETTУ | Главная</title>
+</head>
+<body>
+  
+
+  <div class="wrapper">
+    @@include('modules/header.html')
+
+    <div class="content">
+
+      <!-- Slider -->
+      <div class="content-slider">
+        <img class="content-slider_picture" src="img/bunner1.jpg" alt="offer">
+      </div>
+
+      <div class="section">
+        <div class="section_title">
+          <h1>Лучшие предложения</h1>
+        </div>
+        <div class="section-offers">
+          <div class="section-offers_links">
+            @@include('modules/card.html', {
+              "name": "Apple AirPods 3 (MME73)",
+              "imgUrl": "img/goods/Apple AirPods 3 (MME73).png",
+              "price": "5 799"
+            })
+            @@include('modules/card.html', {
+              "name": "Sony WH-1000XM4 Silver",
+              "imgUrl": "img/goods/Sony WH-1000XM4 Silver.png",
+              "price": "8 999"
+            })
+            @@include('modules/card.html', {
+              "name": "JBL Xtreme 2 Red",
+              "imgUrl": "img/goods/JBL Xtreme 2 Red.png",
+              "price": "5 799",
+            })
+            @@include('modules/card.html', {
+              "name": "HyperX Quadcast",
+              "imgUrl": "img/goods/HyperX Quadcast.png",
+              "price": "3 299",
+            })
+            @@include('modules/card.html', {
+              "name": "JBL Pulse 4 Black",
+              "imgUrl": "img/goods/JBL Pulse 4 Black.png",
+              "price": "6 499",
+            })
+            @@include('modules/card.html', {
+              "name": "Razer Seiren X",
+              "imgUrl": "img/goods/Razer Seiren X.png",
+              "price": "2 999",
+            })
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section_title">
+          <h1>О нас</h1>
+        </div>
+      </div>
+    </div>
+
+    @@include('modules/footer.html')
+  </div>
+
+
+  <!--<script src="js/app.min.js"></script>-->
+</body>
+</html>

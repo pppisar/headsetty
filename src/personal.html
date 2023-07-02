@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>HEADSETTУ | Профиль</title>
+</head>
+<body>
+  <div class="wrapper">
+    @@include('modules/header.html')
+
+    <div class="content">
+      <div class="section">
+        <div class="section_title">
+          <a href="/">
+            <button class="btn_back">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 11L1 6L6 1" stroke="#B5B5B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </a>
+          <h1>Мои покупки</h1>
+        </div>
+
+        <div class="catalog_orders">
+          @@include('modules/card.html', {
+            "name": "Apple AirPods 3 (MME73)",
+            "imgUrl": "img/goods/Apple AirPods 3 (MME73).png",
+            "price": "5 799"
+          })
+          @@include('modules/card.html', {
+            "name": "Sony WH-1000XM4 Silver",
+            "imgUrl": "img/goods/Sony WH-1000XM4 Silver.png",
+            "price": "8 999"
+          })
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section_title">
+          <h1>Личные данные</h1>
+        </div>
+
+        <div class="personal-data">
+          <ul class="personal-data_list">
+            <li>
+              <h3>Фамилия</h3>
+              <p>Писаренко</p>
+            </li>
+            <li>
+              <h3>Имя</h3>
+              <p>Олексій</p>
+            </li>
+            <li>
+              <h3>Отчество</h3>
+              <p>Ігорович</p>
+            </li>
+            <li>
+              <h3>Дата рождения</h3>
+              <p>11.04.2002</p>
+            </li>
+            <li>
+              <h3>Телефон</h3>
+              <p>88005553535</p>
+            </li>
+            <li>
+              <h3>E-mail</h3>
+              <p>pisarenkoalexey@ukr.net</p>
+            </li>
+            <li>
+              <h3>Город</h3>
+              <p>Київ</p>
+            </li>
+            <li>
+              <button class="btn change">Редактировать</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section_title">
+          <h1>Авторизация</h1>
+        </div>
+        <ul class="personal-data_list password">
+          <li>
+            <h3>Введите старый пароль</h3>
+            <input name="lastPass" type="password">
+          </li>
+          <li>
+            <h3>Придумайте новый пароль</h3>
+            <input name="newPass" type="password">
+          </li>
+          <li>
+            <h3>Повторите новый пароль</h3>
+            <input name="confirmPass" type="password">
+          </li>
+          <li>
+           <button class="btn save">Сохранить</button>
+          </li>
+        </ul>
+        
+      </div>
+
+      <button class="btn quit">Выйти</button>
+    </div>
+
+    @@include('modules/footer.html')
+  </div>
+</body>
+</html>

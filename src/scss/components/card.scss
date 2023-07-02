@@ -1,0 +1,55 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 260px;
+  border: 1px solid $light-grey;
+  border-radius: 20px;
+  padding: 30px;
+  font-size: 14px;
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px $light-green;
+  }
+
+  a {
+    display: flex;
+    margin: 0 auto 20px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &_name {
+    text-align: center;
+    height: 34px;
+    overflow: hidden;
+  }
+
+  &_img {
+    height: 100px;
+  }
+
+  &-buy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+
+    &_price {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 11px;
+        color: $grey;
+      }
+    }
+  }
+}
+
+.card:last-child {
+  margin-right: 0px;
+}

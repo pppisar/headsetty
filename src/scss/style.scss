@@ -1,0 +1,193 @@
+@import "vars";
+
+/* Clear default css */
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $light-green;
+    text-decoration: none;
+
+    span {
+      color: $light-green;
+    }
+  }
+}
+/* -- -- -- */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $light-blue;
+  color: $black;
+}
+
+::-webkit-scrollbar {
+  background-color: $blue;
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $green;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 5% auto;
+
+  background: $white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 30px;
+}
+
+.content {
+  padding: 50px 60px;
+
+  &-slider {
+    &_picture {
+      border-radius: 20px;
+      max-width: 100%;
+    }
+    margin-bottom: 50px;
+  }
+
+  &-page {
+    display: grid;
+    grid-template-columns: 15% 85%;
+
+    &_sidebar {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_catalog {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: max-content;
+      grid-gap: 2.5%;
+      margin-left: 30px;
+      padding-right: 10px;
+
+      overflow-y: scroll;
+      height: 100vh;
+    }
+
+    &_catalog::-webkit-scrollbar-track {
+      background-color: $white;
+    }
+  }
+
+  &.item-page {
+    padding: 0;
+    margin: 50px auto;
+  }
+}
+
+.section {
+  margin-bottom: 50px;
+  &_title {
+    display: flex;
+    margin-bottom: 25px;
+    align-items: center;
+
+    h1 {
+      margin: 0;
+      position: relative;
+      font-style: 36px;
+      padding: 0 0 10px;
+
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: calc(100% + 25%);
+        height: 2px;
+        background-color: $light-red;
+        bottom: 0;
+      }
+    }
+  }
+
+  //TODO: slick slider с нормальной адаптацией
+
+  &-offers {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 260px !important;
+
+    &_links {
+      width: 100%;
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-gap: 2%;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+    }
+  }
+}
+
+.section:last-child {
+  margin-bottom: 0px;
+}
+
+/* Components */
+@import "components/header.scss";
+@import "components/filter.scss";
+@import "components/card.scss";
+@import "components/catalog.scss";
+@import "components/personal.scss";
+@import "components/btn.scss";
+@import "components/product.scss";
+@import "components/footer.scss";

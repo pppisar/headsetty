@@ -1,0 +1,108 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 50px;
+  border-bottom: 1px solid $light-grey;
+
+  &-info {
+    display: flex;
+    align-items: center;
+
+    &_logo {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    &_naming {
+      a,
+      p {
+        margin: 0;
+      }
+
+      a {
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 14px;
+        color: $grey;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+
+    &_link {
+      margin-right: 50px;
+
+      &.active {
+        color: $blue;
+        font-weight: 700;
+      }
+    }
+    &_link:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &-actions {
+    display: flex;
+
+    &_item {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+
+      svg {
+        cursor: pointer;
+
+        path {
+          transition: all 0.2s;
+        }
+
+        &:hover {
+          path {
+            fill: $light-green;
+          }
+        }
+      }
+
+      a {
+        display: flex;
+      }
+
+      &.price {
+        svg {
+          margin-right: 10px;
+
+          &:hover {
+            path {
+              fill: none;
+              stroke: $light-green;
+            }
+          }
+        }
+
+        p {
+          font-size: 16px;
+          color: $dark-grey;
+
+          span {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    &_item:last-child {
+      margin-right: 0px;
+    }
+  }
+}

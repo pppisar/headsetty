@@ -1,0 +1,68 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 30px;
+  justify-items: start;
+
+  padding: 60px 200px;
+  border-top: 1px solid $light-grey;
+
+  &-topic {
+    display: flex;
+    flex-direction: column;
+
+    &_title {
+      font-size: 18px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &_subtitle {
+      text-transform: uppercase;
+      font-size: 12px;
+      color: $grey;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    &_link,
+    &_text {
+      font-size: 18px;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    &_link {
+      cursor: pointer;
+
+      &.social {
+        font-size: 0px;
+        margin-bottom: 0px;
+        margin-right: 20px;
+      }
+
+      &.social:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    &_link:last-child {
+      margin-bottom: 0px;
+    }
+
+    &_imgs {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 5px;
+      }
+    }
+
+    //&_form {}
+
+    &_social {
+      display: flex;
+    }
+  }
+}
