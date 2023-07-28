@@ -1227,6 +1227,7 @@ body {
 .product-description-section_text {
   font-size: 18px;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .product-description-section_text:last-child {
